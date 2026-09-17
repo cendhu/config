@@ -7,10 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export GOROOT=/usr/local/go
-# export GOPATH=/Users/senthil/go
-# export PATH=$HOME/bin:/usr/local/bin:/Users/senthil/nvim/bin:$GOPATH/bin:$GOROOT/bin:/Users/senthil/binaries:$PATH
-export PATH=$HOME/bin:/usr/local/bin:/Users/senthil/nvim/bin:$GOROOT/bin:/Users/senthil/binaries:/Users/senthi/go/bin:$PATH
-export PATH=$HOME/go/bin/:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$GOROOT/bin:$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -93,12 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -115,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 
 export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+alias docker=podman
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
